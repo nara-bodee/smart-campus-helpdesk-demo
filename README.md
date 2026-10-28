@@ -37,4 +37,4 @@ npm run dev
 ตาราง users, service_requests, request_attachments, assignments, status_history, notifications ดู [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md); endpoints ดู [API_CONTRACT.md](API_CONTRACT.md).
 
 ## ข้อจำกัด
-Windows Application Control บนเครื่องที่สร้าง demo บล็อก Rollup native module จึงยัง build หรือทดสอบ browser E2E ไม่ได้ ดู [TEST_REPORT.md](TEST_REPORT.md). Token เก็บใน localStorage และ logout ลบ token ใน browser โดยไม่เพิกถอนที่ server. รูปตรวจ signature เบื้องต้นและขนาด ไม่ใช่การ decode หรือสแกนมัลแวร์. ไม่มี WebSocket, rate limiting, email หรือกู้รหัสผ่าน. ไม่ใช่ระบบ production.
+ใช้ @rollup/wasm-node แทน native Rollup เพื่อให้ build บนเครื่องทดสอบที่เปิด Windows Smart App Control ได้; ยังไม่ได้ทดสอบ browser E2E ดู [TEST_REPORT.md](TEST_REPORT.md). Token เก็บใน localStorage และ logout ลบ token ใน browser โดยไม่เพิกถอนที่ server. รูปตรวจ signature เบื้องต้นและขนาด ไม่ใช่การ decode หรือสแกนมัลแวร์. ไม่มี WebSocket, rate limiting, email หรือกู้รหัสผ่าน. ไม่ใช่ระบบ production.

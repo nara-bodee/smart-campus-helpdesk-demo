@@ -15,5 +15,11 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@4.65.1"
   }
 }
