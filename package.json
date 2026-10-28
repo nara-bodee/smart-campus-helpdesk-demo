@@ -1,0 +1,19 @@
+{
+  "name": "smart-campus-helpdesk-demo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "api",
+    "frontend"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev": "concurrently -k \"npm run dev -w api\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w api",
+    "test": "npm test -w api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

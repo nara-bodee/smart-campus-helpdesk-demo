@@ -1,0 +1,1 @@
+export async function api(path,o={}){let h={...(o.body instanceof FormData?{}:{'Content-Type':'application/json'}),...(localStorage.token?{Authorization:'Bearer '+localStorage.token}:{})};let r=await fetch('/api'+path,{...o,headers:h});if(!r.ok){let x=await r.json();throw Error(x.error?.message||'เกิดข้อผิดพลาด')}return r.json()}

@@ -1,0 +1,1 @@
+import {openDb,seed} from './database/db.js'; import {createApp} from './app.js'; const db=openDb();seed(db);createApp({db,secret:process.env.JWT_SECRET}).listen(Number(process.env.PORT||3000),'127.0.0.1',()=>console.log('http://127.0.0.1:'+ (process.env.PORT||3000)));

@@ -1,0 +1,1 @@
+import { rmSync } from 'node:fs'; import {openDb,seed} from './db.js'; if(process.env.NODE_ENV==='production'){console.error('Reset disabled in production');process.exit(1)} for(const x of ['data/helpdesk.sqlite','data/helpdesk.sqlite-wal','data/helpdesk.sqlite-shm'])rmSync(x,{force:true}); const db=openDb();seed(db);db.close();console.log('Demo database reset');
